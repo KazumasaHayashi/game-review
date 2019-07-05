@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @my_game.year %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @my_game.company %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @my_game.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @my_game.price %>
+</p>
+
+<p>
+  <strong>Evaluation:</strong>
+  <%= @my_game.evaluation %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @my_game.comment %>
+</p>
+
+<p>
+  <strong>Already:</strong>
+  <%= @my_game.already %>
+</p>
+
+<%= link_to 'Edit', edit_my_game_path(@my_game) %> |
+<%= link_to 'Back', my_games_path %>

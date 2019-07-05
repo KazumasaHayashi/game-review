@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<head>
+
+</head>
+<body>
+<h1>My Games</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Company</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Evaluation</th>
+      <th>Comment</th>
+      <th>Already</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_games.each do |my_game| %>
+      <tr>
+        <td><%= my_game.year %></td>
+        <td><%= my_game.company %></td>
+        <td><%= my_game.name %></td>
+        <td><%= my_game.price %></td>
+        <td><%= my_game.evaluation %></td>
+        <td><%= my_game.comment %></td>
+        <td><%= my_game.already %></td>
+        <td><%= link_to 'Show', my_game %></td>
+        <td><%= link_to 'Edit', edit_my_game_path(my_game) %></td>
+        <td><%= link_to 'Destroy', my_game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>
+</body>
+<%= link_to 'New My Game', new_my_game_path %>
